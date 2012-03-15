@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NewsFlash</title>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->    
+  <%= stylesheet_link_tag 'blueprint/screen', media: 'screen' %>
+  <%= stylesheet_link_tag 'blueprint/print',  media: 'print' %>
+  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+    <div class="container">
+      <header>
+        <%= link_to image_tag("logo.png", alt: "NewsFlash", class: "round"), root_path %>
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>|
+						<% if loggedin_author? %>
+							<li><%= "Hello #{@loggedin_author.first_name} #{@loggedin_author.last_name}! "%>
+							<%= link_to "(log out)", logout_path %></li>|
+							<li><%= link_to "My Articles", articles_path %></li>
+						<% else %>
+							<li><%= link_to "Log in", login_path %> or
+							<%= link_to "Sign up", signup_path %></li>
+						<% end %>
+          </ul>
+        </nav>
+      </header>
+      <section class="round">
+        <%= yield %>
+      </section>
+    </div>
+  </body>
+</html>

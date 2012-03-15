@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+$main_color: #e32b59;
+$sub_color: #ea9db0;
+
+.container {
+  width: 90%;
+}
+
+body {
+  background: $main_color;
+  padding-bottom: 20px;
+}
+
+header {
+  padding-top: 20px;
+	
+	img {
+	  padding: 0.5em;
+	  background: white;
+	}
+}
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: white;
+
+	h1 {
+	  font-size: 200%;
+	}
+}
+
+/* Links */
+
+a {
+  color: $main_color;
+  text-decoration: none;
+
+	&:hover {
+	  text-decoration: underline;
+	  color: $main_color;
+	}
+
+	&:visited {
+	  color: $main_color;
+	}
+}
+
+/* Navigation */
+
+nav {
+  float: right;
+  background-color: white;
+  padding: 0 0.7em;
+  white-space: nowrap;
+
+	ul {
+	  margin: 0;
+	  padding: 0;
+
+		li {
+		  list-style-type: none;
+		  display: inline-block;
+		  padding: 0.2em 0;
+			font-weight: bold;
+
+			a {
+			  padding: 0 5px;
+			  font-weight: bold;
+			  color: $main_color;
+			
+				&:hover {
+				  text-decoration: underline;
+				  color: $main_color;
+				}
+			}
+		}
+	}
+}
+
+/* buttons */
+
+a.button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: black;
+  background: $main_color;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 10px;
+
+	&:hover {
+	  background: $sub_color;
+	  text-decoration: none;
+	}
+}
+
+
+a.small_button {
+  text-align: center;
+  color: black;
+  background: $main_color;
+  font-size: 85%;
+  font-weight: normal;
+  padding: 8px;
+
+	&:hover {
+	  background: $sub_color;
+	  text-decoration: none;
+	}
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}

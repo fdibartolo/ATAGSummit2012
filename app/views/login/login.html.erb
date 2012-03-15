@@ -1,0 +1,18 @@
+<h1>Log In</h1>
+<p>Please use your username to log in</p>
+
+<div>
+	<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "error_explanation" %>
+	<% end %>
+</div>
+
+<%= form_tag "/signin" do %>
+	<div class="field">
+		<b>Username</b><br />
+		<%= text_field_tag :username %>
+	</div>
+	<div class="actions">
+		<%= submit_tag "Log In!" %>
+	</div>
+<% end %>

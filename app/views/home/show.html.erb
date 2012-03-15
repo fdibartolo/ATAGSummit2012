@@ -1,0 +1,9 @@
+
+<div class="formatted_article round">
+	<p id="date"><%= @article.created_at.strftime("%A, %h %d %Y, %H:%M hs") %></p>
+	<p id="title"><%= @article.title %></p>
+	<p id="author"><%= get_formatted_author_for @article %></p>
+	<p><%= @article.body %></p><br />
+</div>
+
+<%= link_to 'Back', root_path, :class => "small_button round" %>

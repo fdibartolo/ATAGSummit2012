@@ -1,0 +1,48 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.formatted_article {
+
+	background-color: #f8e3e9;
+	border-bottom-style: solid;
+	border-color: gray;
+	padding: 5px 20px 5px 20px;
+	margin: 10px 0 10px 0;
+ 
+	#date {	
+		color: gray;
+		font-style: italic;
+		font-size: 85%;
+		text-align: right;
+	}
+
+	#title {	
+		margin-top: -30px;
+		margin-bottom: 0px;
+		font-size: 170%;
+		font-weight: bold;
+	}
+
+	#actions {
+		font-size: 85%;
+		text-align: right;
+	}
+
+	#author {	
+		margin-top: -5px;
+		margin-bottom: 10px;
+		color: gray;
+		font-style: italic;
+		font-size: 85%;
+		text-align: left;
+	}
+
+	#readmore {	
+		margin-top: -35px;
+		margin-bottom: 0px;
+		font-style: italic;
+		font-size: 85%;
+		text-align: left;
+	}
+}
