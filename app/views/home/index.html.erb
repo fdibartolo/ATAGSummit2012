@@ -5,6 +5,11 @@
 		<p id="author"><%= get_formatted_author_for article %></p>
 		<p><%= article.body[0..140] %>...</p><br />
 		<p id="readmore"><%= link_to 'read more...', :controller => :home, :action => :show, :id => article.id %></p><br />
+		<p id="categories">
+			<% article.categories.each do |c| %>
+				<%= c.name %> 
+			<% end %>		
+		</p>
 	</div>
 <% end %>
 

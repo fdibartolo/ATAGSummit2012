@@ -1,4 +1,6 @@
 NewsFlash::Application.routes.draw do
+  resources :categories
+
   get "login" => "login#login"
   get "signup" => "login#signup"
 	post "register" => "login#register"

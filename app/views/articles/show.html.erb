@@ -9,6 +9,13 @@
   <b>Body:</b><br />
   <%= @article.body %>
 </p>
+
+<p>
+  <b>Categories:</b>
+  <% @article.categories.each do |c| %>
+		'<%= c.name %>' 
+	<% end %>
+</p>
 <br />
 
 <%= link_to 'Edit', edit_article_path(@article), :class => "small_button round" %> |
